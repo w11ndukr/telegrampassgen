@@ -68,7 +68,8 @@ def save(update: Update, _: CallbackContext) -> None:
 # Точка входа
 def main() -> None:
     # Создаем экземпляр бота и получаем его токен
-    updater = Updater('TOKEN')
+    updater = Updater(TOKEN, use_context=True)
+
 
     # Создаем диспетчер и добавляем обработчики команд
     dispatcher = updater.dispatcher
