@@ -65,11 +65,13 @@ def save(update: Update, _: CallbackContext) -> None:
     # Отправляем подтверждение пользователю
     update.message.reply_text(f'Пароль для сервиса {service} успешно сохранен.')
 
+# Токен бота
+TOKEN = '5969795803:AAFwj401KLrSwX34s8QqUrjXpb9kl-cWF10'
+
 # Точка входа
 def main() -> None:
-    # Создаем экземпляр бота и получаем его токен
-    TOKEN = '5969795803:AAFwj401KLrSwX34s8QqUrjXpb9kl-cWF10'
-    updater = Updater(TOKEN)
+    # Создаем экземпляр бота
+    updater = Updater(TOKEN, use_context=True, update_queue=None)
 
     # Создаем диспетчер и добавляем обработчики команд
     dispatcher = updater.dispatcher
@@ -84,4 +86,5 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
 
