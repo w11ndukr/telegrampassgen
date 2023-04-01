@@ -1,5 +1,6 @@
 import random
 import string
+from click import Context
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
 
@@ -46,7 +47,7 @@ def save(update: Update, _: CallbackContext) -> None:
 TOKEN = '5969795803:AAFwj401KLrSwX34s8QqUrjXpb9kl-cWF10'
 
 def main() -> None:
-    updater = Updater(TOKEN, use_context=True)
+    updater = Updater(token=TOKEN, context=Context())
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler('start', start))
     dispatcher.add_handler(CommandHandler('help', help))
