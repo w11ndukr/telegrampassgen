@@ -1,7 +1,8 @@
 import random
 import string
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, ConversationHandler, MessageHandler, Filters, CallbackContext
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
+
 
 def generate_password(length: int, special_chars: bool = False, uppercase: bool = False) -> str:
     chars = string.ascii_lowercase
