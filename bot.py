@@ -65,6 +65,8 @@ def save_password(update: Update, context: CallbackContext) -> None:
         context.bot.send_message(chat_id=update.effective_chat.id, text='Начните генерацию пароля с команды /password')
 
 def main() -> None:
+    TOKEN = '5969795803:AAFwj401KLrSwX34s8QqUrjXpb9kl-cWF10'
+
     updater = Updater(token=TOKEN, context=Context(command=Command))
     dispatcher = updater.dispatcher
 
