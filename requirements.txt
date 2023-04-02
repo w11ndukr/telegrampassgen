@@ -3,3 +3,4 @@ passlib
 pyperclip
 python-dotenv
 flask
+telegram.ext
